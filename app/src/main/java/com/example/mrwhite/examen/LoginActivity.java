@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
         Twitter.initialize(config);
 
-        //rotation = AnimationUtils.loadAnimation(this, R.anim.anim1);
+        rotation = AnimationUtils.loadAnimation(this, R.anim.anim1);
 
         loginButton= findViewById(R.id.login_button);
         loginButton.setCallback(new Callback<TwitterSession>() {
@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
-        //loginButton.startAnimation(rotation);
+        loginButton.startAnimation(rotation);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
