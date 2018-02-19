@@ -45,15 +45,17 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Conectamos con Firabase DATABASE
+
         DataHolder.firebaseAdmin = new FirebaseAdmin();
 
         MainActivityEvents events = new MainActivityEvents(this);
         DataHolder.instance.fireBaseAdmin.setListener(events);
 
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Color Global
+        toolbar.setBackgroundColor(getResources().getColor(R.color.Color2));
+
+
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
