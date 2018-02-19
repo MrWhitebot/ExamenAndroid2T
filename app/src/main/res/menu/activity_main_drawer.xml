@@ -8,15 +8,15 @@
             <item
                 android:id="@+id/Elemento1"
                 android:icon="@drawable/common_full_open_on_phone"
-                android:title="App" />
+                android:title="@string/title_activity_App" />
             <item
                 android:id="@+id/Elemento2"
                 android:icon="@drawable/googleg_standard_color_18"
-                android:title="Google" />
+                android:title="@string/title_activity_google" />
             <item
                 android:id="@+id/Elemento3"
                 android:icon="@drawable/tw__ic_logo_default"
-                android:title="Twitter" />
+                android:title="@string/title_activity_Twitter" />
         </menu>
     </item>
 
