@@ -3,6 +3,7 @@ package com.example.mrwhite.examen;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -62,6 +63,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+    public void myMethod(View v) {
+        if (v.getId() == R.id.btnFotos) {
+            Log.v("Metodo Linekado", "HAS PULSADO EL BOTON DE FOTOS");
+        } else if (v.getId() == R.id.btnMenu) {
+            Log.v("Metodo Linekado", "HAS PULSADO EL BOTON DE MENU");
+        }
     }
 
     @Override
