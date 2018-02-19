@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Examen</string>
 
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">Xg5VpYuzfyiQJ2zdZORchYnSL</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">lNu5K3bdEwnh69xOWXOfPHQni7vY4QeYUZ6AlIsaiv3lEV86zr</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

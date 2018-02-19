@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
-        loginButton.startAnimation(rotation);
+        //loginButton.startAnimation(rotation);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
