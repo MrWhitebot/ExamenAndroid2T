@@ -1,0 +1,106 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrwhite.examen.Fragments.MarkerUserInfoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/btnFotos"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="8dp"
+            android:onClick="myMethod"
+            android:text="FOTOS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.949" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="88dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="myMethod"
+            android:text="Menú"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toEndOf="@+id/btnFotos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.949" />
+
+
+        <TextView
+            android:id="@+id/lblUserName"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text="Usuario"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance"
+            app:layout_constraintEnd_toStartOf="@+id/txtUserName"
+            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblUserName2"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Teléfono"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance"
+            app:layout_constraintBottom_toTopOf="@+id/btnFotos"
+            app:layout_constraintEnd_toStartOf="@+id/txtUserTlf"
+            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblUserName"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="129dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/txtUserTlf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <TextView
+            android:id="@+id/txtUserTlf"
+            android:layout_width="129dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="96dp"
+            android:layout_marginEnd="44dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>
