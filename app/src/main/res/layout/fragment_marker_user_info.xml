@@ -7,11 +7,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-        android:layout_width="match_parent"
-        android:layout_height="222dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
-
         <Button
             android:id="@+id/btnFotos"
             android:layout_width="wrap_content"
