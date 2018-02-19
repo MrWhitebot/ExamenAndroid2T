@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         //Conectamos con Firabase DATABASE
         DataHolder.firebaseAdmin = new FirebaseAdmin();
 
@@ -74,6 +73,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        databaseHandler = new DatabaseHandler(getBaseContext());
+
+        DataHolder.instance.fireBaseAdmin.downloadAndObserveBranch("PerfilesDemo");
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapa1);
+        mapFragment.getMapAsync(events);
+        markerUserInfoFragment = (MarkerUserInfoFragment) getSupportFragmentManager().findFragmentById(R.id.UserInfoFragment);
+
     }
 
     public void myMethod(View v) {
@@ -160,8 +170,7 @@ class MainActivityEvents implements FirebaseAdminListener, OnMapReadyCallback, G
         mMap.setOnMarkerClickListener(this);
         LatLng spain = new LatLng(40.415363, -3.707398);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(spain, 5));
-        // Add a marker in Sydney and move the camera
-
+        // Add a marker in Spain and move the camera
 
     }
 

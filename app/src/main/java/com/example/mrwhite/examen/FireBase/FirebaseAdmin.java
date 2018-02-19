@@ -17,9 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 public class FirebaseAdmin {
     //Listener
     public FirebaseAdminListener listener;
-
     public FirebaseUser user;
-
     public FirebaseAuth mAuth;
     public FirebaseDatabase database;
     public DatabaseReference myRefPerfiles;
