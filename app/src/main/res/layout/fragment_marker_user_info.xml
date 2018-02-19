@@ -7,20 +7,24 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="398dp"
+        android:layout_height="204dp">
+
         <Button
             android:id="@+id/btnFotos"
             android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:layout_marginBottom="8dp"
 
-            android:layout_marginStart="96dp"
+            android:layout_marginStart="92dp"
             android:layout_marginTop="8dp"
             android:onClick="myMethod"
             android:text="FOTOS"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.949" />
+            app:layout_constraintVertical_bias="0.626" />
 
         <Button
             android:id="@+id/btnMenu"
@@ -34,11 +38,10 @@
             android:text="Menú"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintHorizontal_bias="0.268"
             app:layout_constraintStart_toEndOf="@+id/btnFotos"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.949" />
-
+            app:layout_constraintVertical_bias="0.626" />
 
         <TextView
             android:id="@+id/lblUserName"
@@ -46,12 +49,12 @@
             android:layout_height="27dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:text="Usuario"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance"
             app:layout_constraintEnd_toStartOf="@+id/txtUserName"
-            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintHorizontal_bias="0.414"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,34 +71,34 @@
             android:textAppearance="@android:style/TextAppearance"
             app:layout_constraintBottom_toTopOf="@+id/btnFotos"
             app:layout_constraintEnd_toStartOf="@+id/txtUserTlf"
-            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintHorizontal_bias="0.411"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblUserName"
-            app:layout_constraintVertical_bias="0.529" />
+            app:layout_constraintVertical_bias="0.162" />
 
         <TextView
             android:id="@+id/txtUserName"
             android:layout_width="129dp"
             android:layout_height="29dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginEnd="56dp"
             android:layout_marginTop="8dp"
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/txtUserTlf"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.538" />
+            app:layout_constraintVertical_bias="0.8" />
 
         <TextView
             android:id="@+id/txtUserTlf"
             android:layout_width="129dp"
             android:layout_height="29dp"
-            android:layout_marginBottom="96dp"
-            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="120dp"
+            android:layout_marginEnd="56dp"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

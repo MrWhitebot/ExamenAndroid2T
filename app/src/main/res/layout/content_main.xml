@@ -10,28 +10,29 @@
 
     <fragment
         android:id="@+id/UserInfoFragment"
-        android:name="com.google.android.gms.maps.MapFragment"
+        android:name="com.example.mrwhite.examen.Fragments.MarkerUserInfoFragment"
         android:layout_width="353dp"
-        android:layout_height="187dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapa1"
+        app:layout_constraintVertical_bias="0.851" />
 
     <fragment
         android:id="@+id/mapa1"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/UserInfoFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="369dp"
+        android:layout_height="263dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </android.support.constraint.ConstraintLayout>

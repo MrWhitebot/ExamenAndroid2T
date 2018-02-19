@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         //Conectamos con Firabase DATABASE
         DataHolder.firebaseAdmin = new FirebaseAdmin();
 
@@ -51,8 +52,7 @@ public class MainActivity extends AppCompatActivity
         DataHolder.instance.fireBaseAdmin.setListener(events);
 
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -75,15 +75,15 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         databaseHandler = new DatabaseHandler(getBaseContext());
-
         DataHolder.instance.fireBaseAdmin.downloadAndObserveBranch("PerfilesDemo");
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapa1);
+
         mapFragment.getMapAsync(events);
         markerUserInfoFragment = (MarkerUserInfoFragment) getSupportFragmentManager().findFragmentById(R.id.UserInfoFragment);
-
+        Log.v("!!!!!",""+markerUserInfoFragment);
     }
 
     public void myMethod(View v) {
