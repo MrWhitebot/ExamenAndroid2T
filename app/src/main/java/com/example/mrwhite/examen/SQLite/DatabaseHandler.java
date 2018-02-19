@@ -75,7 +75,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             values.put(KEY_TELEFONO, perfil.telefono);
             values.put(KEY_LAT, perfil.lat);
             values.put(KEY_LON, perfil.lon);
-            Log.v("VALUE PERFIL", values.toString());
 
             db.insert(TABLE_PERFILES, null, values);
             db.close();
@@ -98,7 +97,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 perfil.nombre = cursor.getString(1);
                 perfil.telefono = (Integer.parseInt(cursor.getString(2)));
                 perfil.lat = (Double.parseDouble(cursor.getString(3)));
-                Log.v("LAT USUARIO","NOMBRE" + cursor.getString(1)+ " LAT: "+cursor.getString(3)+" LON: " +cursor.getString(4));
                 perfil.lon = (Double.parseDouble(cursor.getString(4)));
 
                 perfilMap.add(perfil);

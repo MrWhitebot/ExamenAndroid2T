@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.mrwhite.examen.DataHolder.DataHolder;
+import com.example.mrwhite.examen.FireBase.FirebaseAdmin;
 import com.example.mrwhite.examen.FireBase.FirebaseAdminListener;
 import com.example.mrwhite.examen.Fragments.MarkerUserInfoFragment;
 import com.example.mrwhite.examen.Objects.Perfil;
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        //Conectamos con Firabase DATABASE
+        DataHolder.firebaseAdmin = new FirebaseAdmin();
+
+        MainActivityEvents events = new MainActivityEvents(this);
+        DataHolder.instance.fireBaseAdmin.setListener(events);
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -64,6 +75,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
     public void myMethod(View v) {
         if (v.getId() == R.id.btnFotos) {
             Log.v("Metodo Linekado", "HAS PULSADO EL BOTON DE FOTOS");
@@ -129,6 +141,8 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+
+
 class MainActivityEvents implements FirebaseAdminListener, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     MainActivity generalActivity;
